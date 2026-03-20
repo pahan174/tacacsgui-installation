@@ -136,10 +136,6 @@ The installer was written from scratch for it to work with Ubuntu 22.04 and 24.0
 :computer: [@me](https://github.com/ichantio)
 
 # Update March 2026
-
-Or an even shorter version:
-
-```markdown
 ## Composer Fix
 
 Added `audit.block-insecure false` to bypass security advisory blocking for `firebase/php-jwt`, which is required by `jimtools/jwt-auth`.
