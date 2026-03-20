@@ -261,6 +261,8 @@ sudo mkdir -p /var/www/.cache/composer/files/
 sudo chmod -R 777 /var/www/.cache/composer/repo/https---repo.packagist.org/
 sudo chmod -R 777 /var/www/.cache/composer/files/
 # Install PHP packages
+# Disable audit blocking to allow packages with security advisories (required for jwt-auth)
+sudo -u www-data composer config -d /opt/tacacsgui/web/api audit.block-insecure false
 sudo -u www-data composer update -d /opt/tacacsgui/web/api --ignore-platform-req=php
 sudo -u www-data composer install -d /opt/tacacsgui/web/api --ignore-platform-req=php
 cd ${INSTALLER_DIR}

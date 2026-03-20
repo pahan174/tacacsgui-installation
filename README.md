@@ -21,6 +21,7 @@ OS                                | PHP       | Python        | MySQL        | t
 ---                               | ---       | ---           | ---          | ---
 Ubuntu Server 22.04 LTS STANDARD  | PHP8.3.11 | Python3.10.12 | MySQL 8.0.39 | tac_plus latest dl 2024-09
 Ubuntu Server 24.04 LTS STANDARD  | PHP8.3.6  | Python3.12.3  | MySQL 8.0.39 | tac_plus latest dl 2024-09
+Ubuntu Server 24.04.4 LTS STANDARD | PHP8.3.6 | Python3.12.3 | MySQL 8.0.45 | tac_plus latest dl 2024-09
 
 :heavy_exclamation_mark::warning::heavy_exclamation_mark: NOT TESTED but will probably work on Debian 10 and 12 (very similar software repos)
 
@@ -133,3 +134,12 @@ The installer was written from scratch for it to work with Ubuntu 22.04 and 24.0
 
 # Author
 :computer: [@me](https://github.com/ichantio)
+
+# Update March 2026
+
+Or an even shorter version:
+
+```markdown
+## Composer Fix
+
+Added `audit.block-insecure false` to bypass security advisory blocking for `firebase/php-jwt`, which is required by `jimtools/jwt-auth`.
